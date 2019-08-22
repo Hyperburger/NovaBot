@@ -1,0 +1,14 @@
+{
+  "name": "NovaBot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "dragiceviccv",
+  "license": "none",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "quick.db": "^6.3.2"
+  }
+}
