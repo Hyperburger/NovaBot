@@ -7,11 +7,11 @@ const announcementCooldown = 120; //minutes
 const reactionMessageID = "614144173603422263";
 const reactionEmojiID = "614144969313091609";
 const reactionRoleID = "614144046482325544";
-bot.on('raw', packet => {
+bot.on('raw', async (packet) => {
   // We don't want this to run on unrelated packets
   if (!['MESSAGE_REACTION_ADD', 'MESSAGE_REACTION_REMOVE'].includes(packet.t)) return;
   // Grab the channel to check the message from
-  const channel = bot.channels.get(packet.d.channel_id);
+  const channel = await bot.channels.get(packet.d.channel_id);
   // There's no need to emit if the message is cached, because the event will fire anyway for that
   if (channel.messages.has(packet.d.message_id)) return;
   // Since we have confirmed the message is not cached, let's fetch it
