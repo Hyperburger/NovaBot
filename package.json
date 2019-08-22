@@ -8,7 +8,7 @@
   "author": "dragiceviccv",
   "license": "none",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "11.5.1",
     "quick.db": "^6.3.2"
   }
 }
