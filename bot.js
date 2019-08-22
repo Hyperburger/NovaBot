@@ -2,11 +2,11 @@ const { Client } = require("discord.js");
 const bot = new Client();
 const db = require("quick.db");
 const botToken = "botToken";
-const announcementChannelID = "id";
+const announcementChannelID = "614143704063541248";
 const announcementCooldown = 120; //minutes
-const reactionMessageID = "id";
-const reactionEmojiID = "id";
-const reactionRoleID = "id";
+const reactionMessageID = "614144173603422263";
+const reactionEmojiID = "614144969313091609";
+const reactionRoleID = "614144046482325544";
 bot.on('raw', packet => {
   // We don't want this to run on unrelated packets
   if (!['MESSAGE_REACTION_ADD', 'MESSAGE_REACTION_REMOVE'].includes(packet.t)) return;
