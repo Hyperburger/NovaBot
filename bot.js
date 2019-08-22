@@ -57,14 +57,14 @@ setInterval(async () => {
   if (!messageSent) {
     //get channel and send message
     const channel = await bot.channels.get(announcementChannelID);
-    channel.send(`<@${reactionRoleID}> i need to tell you something`)
+    channel.send(`<@&${reactionRoleID}> i need to tell you something`)
     await db.set("messageLastSent", Date.now())
   } else {
     //if it's time to send it again
     if ((Date.now() - (messageSent + (announcementCooldown * 60 * 1000)) >= 0)) {
       //get channel and send new message
       const channel = await bot.channels.get(announcementChannelID);
-      channel.send(`<@${reactionRoleID}> i need to tell you something`)
+      channel.send(`<@&${reactionRoleID}> i need to tell you something`)
       await db.set("messageLastSent", Date.now())
     };
   };
