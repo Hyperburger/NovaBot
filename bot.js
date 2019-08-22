@@ -70,4 +70,4 @@ setInterval(async () => {
   };
 }, 60000);
 });
-bot.login(process.env.token);
+bot.login(process.env.bottoken);
